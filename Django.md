@@ -41,12 +41,14 @@ the urls file is used to send URL declarations for this project to the URL dispa
 * to define an object of type list *urlpatterns*. This list will contain the result of the imported function django.urls.path
 * in order to use a created applications url patterns, you can use the include function
 
+
+Example:
+
     from django.contrib import admin # Admin interface application included with Django
     from django.urls import path
-
     urlpatterns = [
         path('admin/', admin.site.urls),
-        path('myapp/', include('myapp.urls'))   
+        path('myapp/', include('myapp.urls')),
     ]
 
 #### wsgi.py / asgi.py
